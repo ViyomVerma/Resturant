@@ -1,10 +1,23 @@
 import React, { useState , useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './About.css';
 import CategoryNavbar from "../components/categoryNavbar";
 import Resturant from "../components/Resturant";
 
 const Menu = () => {
-  const [category, setCategory] = useState("BREAKFAST");
+
+  const [category, setCategory] = useState("ALL");
+   const location = useLocation();
+   useEffect(() => {
+    window.scrollTo(0,0);
+   },[location]);
+
+   useEffect(() => {
+     const queryParams = new URLSearchParams(location.search);
+     const categoryFromURL = queryParams.get("category");
+    setCategory(categoryFromURL || "ALL");
+  }, [location.search]);
+  // const [category, setCategory] = useState("BREAKFAST");
 
   const menuData=[
     { tag: "01", dish: "Maggie", image: "assets/maggie.png", category: "BREAKFAST" },
@@ -27,7 +40,7 @@ const Menu = () => {
     { tag: "18", dish: "Aloo Parantha", image: "assets/aloo.png", category: "LUNCH" },
     { tag: "19", dish: "Daal Vada", image: "assets/daal_vada.png", category: "DINNER" },
     { tag: "20", dish: "Gulab Jamun", image:"assets/gulab_jamun.png", category: "DESSERT" },
-    { tag: "21", dish: "Beverages", image: "assets/bevrages", category: "BEVERAGES" },
+    { tag: "21", dish: "Beverages", image: "assets/bevrages.png", category: "BEVERAGES" },
     { tag: "22", dish: "Choley Bhature", image: "assets/choley.png", category: "BREAKFAST" },
     { tag: "23", dish: "Vada Pav", image:"assets/vada_pav.png", category: "BREAKFAST" },
     { tag: "24", dish: "Idli Sambar", image: "assets/idli_sambar.png", category: "BREAKFAST" },
@@ -38,12 +51,23 @@ const Menu = () => {
     { tag: "29", dish: "Daal Vada", image: "assets/daal_vada.png", category: "DINNER" },
     { tag: "30", dish: "Gulab Jamun", image: "assets/gulab_jamun.png", category: "DESSERT" },
     { tag: "31", dish: "Beverages", image:"assets/bevrages.png", category: "BEVERAGES" },
-    
+    { tag: "32", dish: "Beverages", image:"assets/bevrages.png", category: "BEVERAGES" },
+    { tag: "33", dish: "Beverages", image:"assets/bevrages.png", category: "BEVERAGES" },
+    { tag: "34", dish: "Beverages", image:"assets/bevrages.png", category: "BEVERAGES" },
+    { tag: "35", dish: "Gulab Jamun", image: "assets/gulab_jamun.png", category: "DESSERT" },
+    { tag: "36", dish: "Gulab Jamun", image: "assets/gulab_jamun.png", category: "DESSERT" },
+    { tag: "37", dish: "Gulab Jamun", image: "assets/gulab_jamun.png", category: "DESSERT" },
+    { tag: "38", dish: "Daal Vada", image: "assets/daal_vada.png", category: "DINNER" },
+    { tag: "39", dish: "Daal Vada", image: "assets/daal_vada.png", category: "DINNER" },
+    { tag: "40", dish: "Daal Vada", image: "assets/daal_vada.png", category: "DINNER" },
+    { tag: "41", dish: "Daal Vada", image: "assets/daal_vada.png", category: "DINNER" },
+    { tag: "42", dish: "Daal Vada", image: "assets/daal_vada.png", category: "DINNER" },
+    { tag: "43", dish: "Daal Vada", image: "assets/daal_vada.png", category: "DINNER" },
   ];
 
-  const filteredData = menuData.filter((item) => item.category === category);
+  const filteredData = category === "ALL"? menuData :menuData.filter((item) => item.category.toUpperCase() === category.toUpperCase() );
   return (
-    <div >
+    <div className='menu-page' >
       <div>
         <CategoryNavbar setCategory={setCategory}/>
       </div>

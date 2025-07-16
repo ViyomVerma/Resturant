@@ -41,42 +41,7 @@
     font-weight: lighter;
     font-size: 20px;
 }
-.home3-container{
-    margin-top: 8%;
-    padding: 5%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    width: 100%;
-    height: 500px;
-    background-color:#05041a;
-    gap: 100px;
-    color: #e6a981;
-}
-.staff-img{
-    border-top-left-radius: 35%;
-    border-bottom-right-radius: 35%;
-    width: 400px;
-    height: 600px;
-}
-.staff-name{
-    font-size: 60px;
-    font-weight: 70;
-}
-.staff-bio{
-    padding-top: 50px;
-    font-family: 'Poppins', sans-serif;
-    color: gray;
-    line-height: 30px;
-}
-.text-img{
-    width: 250px;
-    height: 400px;
-    padding: 100px 40px 0px 0px;
-    border-top-right-radius: 45%;
-    border-bottom-left-radius: 45%;
-}
+
 .home4-container{
     justify-content: center;
     align-items: center;

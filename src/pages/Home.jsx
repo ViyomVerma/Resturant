@@ -1,10 +1,17 @@
 import React,{ useEffect , useRef , useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import ReservationForm from '../components/Reservation';
+import Menu from './Menu';
 import './Home.css';
-// import SocialIcons from '../components/home-icon';
+import Staff from '../components/staff';
 
 const Home = () => {
+ 
+const navigate=useNavigate();
+const handleClick= (category) => {
+  navigate(`/menu?category=${category}`);
+};
 
 const home4Ref = useRef(null);
 const[isVisible , setIsVisible] = useState(false);
@@ -105,27 +112,18 @@ const instaRef = useRef(null);  // Ref for the insta container
           <h1 className='text'>Garden</h1>
           <h6 className='text1'>ESTD - 1997</h6>
       </div>
-
-      <div className="home3-container">
-          <div >
-            <img src={"home-image/rest6.jpg"} className="staff-img"></img>
-          </div>
-          <div className="staff-text">
-            <h1 className='staff-name'>Aarav Virani</h1>
-            <p className='staff-bio'>At the heart of our kitchen is Aarav Virani — a culinary artisan dedicated to bringing timeless Indian flavors to life. With a deep respect for tradition and a flair for innovation, Aarav curates every dish to evoke warmth, nostalgia, and delight. Whether you’re here for a soulful daal, an aromatic biryani, or a delicate mithai, every experience is crafted to feel personal — like a memory from home, served with elegance.</p>
-          </div>
-          <div className="text-img">
-            <img src={"home-image/rest2.png"} className="text-img"></img>
-          </div>
+      
+      <div className="home3-cont">
+        <Staff/>
       </div>
       
         <div ref={home4Ref} className={`home4-container ${isVisible ? 'animate-up' : ''}`}>
             <ul className='home-ul'>
               <li onClick={() => handleClick("BREAKFAST")} className='home-li'>BREAKFAST</li>
-              <li onClick={() => setCategory("LUNCH")} className='home-li'>LUNCH</li>
-              <li onClick={() => setCategory("DINNER")} className='home-li'>DINNER</li>
-              <li onClick={() => setCategory("BEVERAGES")} className='home-li'>BEVERAGES</li>
-              <li onClick={() => setCategory("DESSERT")} className='home-li'>DESSERT</li>
+              <li onClick={() => handleClick("LUNCH")} className='home-li'>LUNCH</li>
+              <li onClick={() => handleClick("DINNER")} className='home-li'>DINNER</li>
+              <li onClick={() => handleClick("BEVERAGES")} className='home-li'>BEVERAGES</li>
+              <li onClick={() => handleClick("DESSERT")} className='home-li'>DESSERT</li>
             </ul>
 
              
@@ -189,7 +187,7 @@ const instaRef = useRef(null);  // Ref for the insta container
                   </div>
             ))}
 
-            
+
         </div>
     </div>
 

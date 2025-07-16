@@ -1,0 +1,110 @@
+.about1-container{
+    margin-top: 7%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    padding-left: 5%;
+    width: 100%;
+    margin-bottom: 12%;
+}
+.about-story{
+    width: 50%;
+}
+.about-story h1{
+   font-family: 'Cormorant Garamond', serif;
+   font-size: 70px;
+   color: #b9b8b8;
+}
+.about-story p{
+    font-size: 18px;
+    font-weight: lighter;
+    font-family: 'Poppins', sans-serif;
+    color: gray;
+    letter-spacing: 1px;
+}
+.view-more{
+    margin-top: 10%;
+    background-color: transparent;
+    border: 0.2px solid #e6a981;
+    padding: 10px 30px;
+    color: #e6a981;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+.view-more:hover{
+    cursor: pointer;
+    background-color:#e6a981;
+    color: black;
+   padding: 10px 50px;
+}
+.about-img{
+    width: 50%;
+    height: 500px;
+}
+.story-image{
+    width:600px;
+    height: 700px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    box-shadow: 0 0px 10px #e6a981;
+}
+.about-values {
+  background-color: #1c1c1e;
+  padding: 50px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.about-values h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-values ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.about-values li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+/* Timeline section */
+.about-timeline {
+  background-color: #111;
+  padding: 50px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.about-timeline h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+.timeline li {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  padding-left: 20px;
+  position: relative;
+  color: #ccc;
+}
+
+.timeline li span {
+  font-weight: bold;
+  color: #ffb347;
+  margin-right: 10px;
+}

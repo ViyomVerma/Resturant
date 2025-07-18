@@ -3,10 +3,13 @@ import { useLocation } from 'react-router-dom';
 import './About.css';
 import CategoryNavbar from "../components/categoryNavbar";
 import Resturant from "../components/Resturant";
+import { IoMdSearch } from "react-icons/io";
+import Searchicon from '../components/Searchicon';
 
 const Menu = () => {
 
   const [category, setCategory] = useState("ALL");
+  const [searchQuery, setSearchQuery] = useState('');
    const location = useLocation();
    useEffect(() => {
     window.scrollTo(0,0);
@@ -68,10 +71,8 @@ const Menu = () => {
   const filteredData = category === "ALL"? menuData :menuData.filter((item) => item.category.toUpperCase() === category.toUpperCase() );
   return (
     <div className='menu-page' >
-      <div>
-        <CategoryNavbar setCategory={setCategory}/>
-      </div>
-
+        <Searchicon  setCategory={setCategory} setSearchQuery={setSearchQuery} />
+         
      <div className="container">
         {filteredData.length > 0 ? (
           filteredData.map((item) => (

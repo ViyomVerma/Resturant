@@ -17,14 +17,16 @@
    color: #b9b8b8;
 }
 .about-story p{
-    font-size: 18px;
+    font-size: 15px;
     font-weight: lighter;
     font-family: 'Poppins', sans-serif;
     color: gray;
     letter-spacing: 1px;
+    margin-bottom: 30px;
 }
 .view-more{
-    margin-top: 10%;
+  margin-top: 60px;
+    text-decoration: none;
     background-color: transparent;
     border: 0.2px solid #e6a981;
     padding: 10px 30px;
@@ -56,55 +58,52 @@
   color: #fff;
 }
 
-.about-values h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.about-values ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 700px;
-}
-
-.about-values li {
-  font-size: 1.2rem;
-  margin: 10px 0;
-  line-height: 1.6;
-}
-
-/* Timeline section */
-.about-timeline {
-  background-color: #111;
-  padding: 50px 20px;
+.about-team{
+  margin-top: 10%;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  color: #fff;
+}
+.team{
+  font-size: 40px;
+  word-spacing: 5px;
+   letter-spacing: 2px;
+   font-weight: 100;
+   color: rgb(145, 145, 145);
+}
+.restchef{
+  width: 200px;
+  height: 250px;
+  border-radius: 10%;
+}
+.team-grid{
+  margin: 5% 0px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 50px;
+}
+.chef-name{
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+.about-cta{
+  display: flex;
+  color: gray;
+  padding: 50px;
+}
+.visit-img{
+  width: 700px;
+  border-top-right-radius: 30%;
+  border-bottom-left-radius: 30%;
+}
+.visit-text{
+  padding: 10% 5%;
+  text-align: center;
+  line-height: 50px;
+}
+.visit-head{
+  font-size: 40px;
 }
 
-.about-timeline h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-}
 
-.timeline {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 800px;
-  text-align: left;
-}
-
-.timeline li {
-  margin-bottom: 15px;
-  font-size: 1.1rem;
-  padding-left: 20px;
-  position: relative;
-  color: #ccc;
-}
-
-.timeline li span {
-  font-weight: bold;
-  color: #ffb347;
-  margin-right: 10px;
-}

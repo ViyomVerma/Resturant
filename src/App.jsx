@@ -6,8 +6,7 @@ import Footer from './components/Footer';
 
 import Home from './pages/Home';
 import About from './pages/About';
-import Contact from './pages/Contact';
-import Blogs from './pages/Blogs';
+import Events from './pages/Events';
 import Menu from './pages/Menu';
 
 
@@ -19,8 +18,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/events" element={<Events />} />
         <Route path="/menu" element={<Menu />} />
       </Routes>
 
